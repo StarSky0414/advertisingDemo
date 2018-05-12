@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="op.AdvertisingEntity" table="advertising" schema="cottee">
+        <id name="imageId">
+            <column name="imageId" sql-type="int(11) unsigned"/>
+        </id>
+        <property name="displayType">
+            <column name="displayType" sql-type="tinyint(2) unsigned"/>
+        </property>
+        <property name="ossFileName">
+            <column name="ossFileName" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="imageFormat">
+            <column name="imageFormat" sql-type="tinyint(2)"/>
+        </property>
+        <property name="beginTime">
+            <column name="beginTime" sql-type="date"/>
+        </property>
+        <property name="endTime">
+            <column name="endTime" sql-type="date"/>
+        </property>
+        <property name="displayTime">
+            <column name="displayTime" sql-type="int(5) unsigned"/>
+        </property>
+    </class>
+</hibernate-mapping>
